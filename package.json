@@ -1,0 +1,57 @@
+{
+  "name": "docker-upload",
+  "version": "0.0.7",
+  "description": "",
+  "type": "module",
+  "main": "bin/index.js",
+  "bin": {
+    "docker-upload": "bin/index.js"
+  },
+  "scripts": {
+    "test": "tsx ./bin/index.js",
+    "test:node": "node ./bin/index.js",
+    "build": "tsup-node ./src/index.ts",
+    "start": "tsx ./src/index.ts",
+    "pnpm:publish": "npm run build && pnpm publish --no-git-checks"
+  },
+  "files": [
+    "bin/index.js"
+  ],
+  "engines": {
+    "node": ">=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0"
+  },
+  "keywords": [
+    "docker",
+    "image",
+    "upload",
+    "cli"
+  ],
+  "author": "Neo Fu <rtugeek@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^7.10.1",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
+    "consola": "^3.4.2",
+    "figlet": "^1.9.4",
+    "ora": "^9.0.0",
+    "pretty-bytes": "^7.1.0",
+    "ssh-config": "^5.0.4",
+    "ssh2": "^1.17.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.2.0",
+    "@tsconfig/node18": "^18.2.6",
+    "@types/figlet": "^1.7.0",
+    "@types/gradient-string": "^1.1.6",
+    "@types/node": "^24.10.1",
+    "@types/ssh2": "^1.15.5",
+    "eslint": "^9.39.1",
+    "ts-loader": "^9.5.4",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "zx": "^8.8.5"
+  }
+}
