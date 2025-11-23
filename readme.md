@@ -10,16 +10,7 @@
 3. 自己搭建镜像源（麻烦）
 4. 用有科学上网的本地电脑拉取镜像后再上传到云服务器
 
-`DockerUpload` 使用的是第4种方法，只需要一行命令，帮你自动执行命令，完成多个镜像打包、传输和加载：
-
-```shell
-# 1. 打包docker image
-docker save xxx
-# 2. 传输到云服务器
-scp xxx.tar user@server:/tmp/xxx.tar
-# 3. 在云服务器加载docker image
-ssh user@server 'docker load -i /tmp/xxx.tar'
-```
+`DockerUpload` 使用的是第4种方法，只需要一行命令，帮你自动执行命令，完成多个镜像打包、传输和加载。
 
 
 ## 使用指南
@@ -46,3 +37,15 @@ docker-upload
 1.根据提示选择要传输的镜像（支持多选）  
 2.根据提示选择云服务器（支持搜索）  
 ![](./screenshot/demo.gif)
+
+## 原理
+
+`docker-upload` 只是帮你自动执行了下面命令而已，没有什么技术含量：
+```shell
+# 1. 打包docker image
+docker save xxx
+# 2. 传输到云服务器
+scp xxx.tar user@server:/tmp/xxx.tar
+# 3. 在云服务器加载docker image
+ssh user@server 'docker load -i /tmp/xxx.tar'
+```
