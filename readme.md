@@ -31,9 +31,9 @@ Host myserver
 npx docker-upload
 ```
 
-1.根据提示选择要传输的镜像（支持多选）  
-2.根据提示选择云服务器（支持搜索）  
-3.输入ssh密码  
+1. 根据提示选择要传输的镜像（支持多选）  
+2. 根据提示选择云服务器（支持搜索）  
+3. 输入ssh密码  
 ![Demo.gif](./screenshot/demo.gif)
 
 ## 🔣原理
