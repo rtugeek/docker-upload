@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // src/index.ts
 import fs3 from "fs";
 import os from "os";

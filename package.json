@@ -1,11 +1,11 @@
 {
   "name": "docker-upload",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "",
   "type": "module",
   "main": "bin/index.js",
   "bin": {
-    "docker-upload": "bin/index.js"
+    "docker-upload": "./bin/index.js"
   },
   "scripts": {
     "test": "tsx ./bin/index.js",
