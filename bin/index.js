@@ -49,7 +49,6 @@ var DockerUtils = class {
   static async saveImage(image) {
     try {
       const tarFilePath = `${image.getLegalFileName()}.tar`;
-      consola.info(`Save Docker image ${image.toString()} to ${tarFilePath}`);
       await new Promise((resolve, reject) => {
         exec(`docker save -o ${tarFilePath} ${image.toString()}`, (error) => {
           if (error) {
@@ -257,6 +256,7 @@ async function start() {
       tarFilePath = await spinner.taskBlock("Save docker image to tar file", () => {
         return DockerUtils.saveImage(dockerImage);
       });
+      spinner.info(`${dockerImage.toString()} -> ${tarFilePath} saved.`);
       const prettyBytes = (await import("pretty-bytes")).default;
       const fileSize = fs3.statSync(tarFilePath).size;
       spinner.info(`Tar file size: ${prettyBytes(fileSize)}`);

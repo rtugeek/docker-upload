@@ -28,7 +28,6 @@ export class DockerUtils {
   static async saveImage(image: DockerImage): Promise<string> {
     try {
       const tarFilePath = `${image.getLegalFileName()}.tar`
-      consola.info(`Save Docker image ${image.toString()} to ${tarFilePath}`)
       await new Promise((resolve, reject) => {
         exec(`docker save -o ${tarFilePath} ${image.toString()}`, (error) => {
           if (error) {

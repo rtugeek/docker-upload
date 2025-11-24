@@ -1,6 +1,6 @@
 {
   "name": "docker-upload",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "",
   "type": "module",
   "main": "bin/index.js",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
-    "@tsconfig/node18": "^18.2.6",
+    "@tsconfig/node22": "^22.0.5",
     "@types/figlet": "^1.7.0",
     "@types/gradient-string": "^1.1.6",
     "@types/node": "^24.10.1",

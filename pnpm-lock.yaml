@@ -37,9 +37,9 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: ^6.2.0
     version: 6.2.0(@vue/compiler-sfc@3.5.24)(eslint@9.39.1)(typescript@5.9.3)
-  '@tsconfig/node18':
-    specifier: ^18.2.6
-    version: 18.2.6
+  '@tsconfig/node22':
+    specifier: ^22.0.5
+    version: 22.0.5
   '@types/figlet':
     specifier: ^1.7.0
     version: 1.7.0
@@ -1370,8 +1370,8 @@ packages:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: true
 
-  /@tsconfig/node18@18.2.6:
-    resolution: {integrity: sha512-eAWQzAjPj18tKnDzmWstz4OyWewLUNBm9tdoN9LayzoboRktYx3Enk1ZXPmThj55L7c4VWYq/Bzq0A51znZfhw==}
+  /@tsconfig/node22@22.0.5:
+    resolution: {integrity: sha512-hLf2ld+sYN/BtOJjHUWOk568dvjFQkHnLNa6zce25GIH+vxKfvTgm3qpaH6ToF5tu/NN0IH66s+Bb5wElHrLcw==}
     dev: true
 
   /@types/debug@4.1.12:
